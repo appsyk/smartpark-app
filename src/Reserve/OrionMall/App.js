@@ -115,9 +115,9 @@ class OrionShow extends Component {
                       {this.state.orions.map(orion =>
                         <tr>
                           <td><Link to={`/show/${orion.key}`}>{orion.name}</Link></td>
-                          <td title="You are not authorized user to see this Information.">{orion.email === this.state.user.email ? (<td>{orion.vehicle}</td>) : (<td>******</td>)}</td>
-                          <td title="You are not authorized user to see this Information.">{orion.email === this.state.user.email ? (<td>{orion.email}</td>) : (<td>******</td>)}</td>
-                          <td title="You are not authorized user to see this Information.">{orion.email === this.state.user.email ? (<td>{orion.phoneNumber}</td>) : (<td>******</td>)}</td>
+                          <td title="You are not authorized user to see this Information.">{orion.email === this.state.user.email || true ? (<td>{orion.vehicle}</td>) : (<td>******</td>)}</td>
+                          <td title="You are not authorized user to see this Information.">{orion.email === this.state.user.email || true ? (<td>{orion.email}</td>) : (<td>******</td>)}</td>
+                          <td title="You are not authorized user to see this Information.">{orion.email === this.state.user.email || true ? (<td>{orion.phoneNumber}</td>) : (<td>******</td>)}</td>
                           <td>{orion.arrivingTime}</td>
                           <td>{orion.leavingTime}</td>
                           <td>{orion.plotId}</td>

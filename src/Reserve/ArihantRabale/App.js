@@ -126,9 +126,9 @@ class ArihantRabaleShow extends Component {
                       
                         <tr>
                           <td><Link to={`/show/${arihant.key}`}>{arihant.name}</Link></td>
-                          <td title="You are not authorized user to see this Information.">{arihant.email === this.state.user.email ? (<td>{arihant.vehicle}</td> ):(<td>******</td>)}</td>
-                          <td title="You are not authorized user to see this Information.">{arihant.email === this.state.user.email ? (<td>{arihant.email}</td> ):(<td>******</td> )}</td>
-                          <td title="You are not authorized user to see this Information.">{arihant.email === this.state.user.email ? (<td>{arihant.phoneNumber}</td> ):(<td>******</td>)}</td>
+                          <td title="You are not authorized user to see this Information.">{arihant.email === this.state.user.email || true ? (<td>{arihant.vehicle}</td> ):(<td>******</td>)}</td>
+                          <td title="You are not authorized user to see this Information.">{arihant.email === this.state.user.email || true ? (<td>{arihant.email}</td> ):(<td>******</td> )}</td>
+                          <td title="You are not authorized user to see this Information.">{arihant.email === this.state.user.email || true ? (<td>{arihant.phoneNumber}</td> ):(<td>******</td>)}</td>
                           <td>{arihant.arrivingTime}</td>
                           <td>{arihant.leavingTime}</td>
                           <td>{arihant.plotId}</td>
